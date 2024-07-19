@@ -1,10 +1,12 @@
 import mongoose from 'mongoose';
 
 const UserSchema = new mongoose.Schema({
-  name: String,
-  email: String,
-});
+  // Define your user schema here
+  name: {
+    type: String,
+    required: true,
+  },
+  // Add other fields as needed
+}, { collection: 'users' });
 
-const User = mongoose.models.User || mongoose.model('User', UserSchema);
-
-export default User;
+export default mongoose.models.User || mongoose.model('User', UserSchema);

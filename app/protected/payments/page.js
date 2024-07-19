@@ -1,7 +1,6 @@
 'use client'
 import {useState} from 'react';
 import Head from "next/head";
-import Container from "@/components/container";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faArrowRightLong} from "@fortawesome/free-solid-svg-icons";
 
@@ -64,7 +63,7 @@ export default function Payments() {
             <Head>
                 <title>{`Payments`}</title>
             </Head>
-            <Container>
+
                 <div className={'max-w-lg mx-auto p-8 border-primary border-solid border-[5px] flex flex-col bg-white relative'}>
                     <h1 className={'mb-4 font-bold text-2xl'}>Tickets</h1>
                     <p className={'text-[14px] mb-4'}> Text for ticket.</p>
@@ -101,7 +100,6 @@ export default function Payments() {
                     </button>
                     {error && <p style={{color: 'red'}}>{error}</p>}
                 </div>
-            </Container>
         </>
 
     );

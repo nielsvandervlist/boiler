@@ -12,7 +12,7 @@ export default function RootLayout({children, session}) {
         <main className={'min-h-[100vh] flex flex-col'}>
             <SessionProviderWrapper session={session}>
                 <Navbar/>
-                <Container>
+                <Container className={'justify-center items-center flex min-w-8'}>
                     {children}
                 </Container>
             </SessionProviderWrapper>

@@ -6,7 +6,7 @@ export default async function Page() {
     const session = await getServerSession(authOptions);
 
     if(!session){
-        return <div>Test</div>
+        return <div>No user</div>
     }
 
     return <div>Hello</div>;
