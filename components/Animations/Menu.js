@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useAnimate, stagger } from "framer-motion";
+import Link from "next/link";
 
 function useMenuAnimation(isOpen) {
     const [scope, animate] = useAnimate();
@@ -28,12 +29,12 @@ function useMenuAnimation(isOpen) {
 
 const MenuNav = () => {
     return (
-        <nav className="fixed top-0 left-0 bottom-0 w-[400px] bg-accent pt-[100px] transform translate-x-[-100%] will-change-transform">
+        <nav className="fixed z-20 top-0 left-0 bottom-0 w-[400px] bg-accent pt-[100px] transform translate-x-[-100%] will-change-transform">
             <ul className="flex flex-col gap-[10px] p-[15px] list-none m-0">
-                <li className="text-background font-bold text-[48px] p-[10px] transform origin-[-20px_50%] will-change-transform opacity-0 scale-50 blur-[10px]">Portfolio</li>
-                <li className="text-background font-bold text-[48px] p-[10px] transform origin-[-20px_50%] will-change-transform opacity-0 scale-50 blur-[10px]">About</li>
-                <li className="text-background font-bold text-[48px] p-[10px] transform origin-[-20px_50%] will-change-transform opacity-0 scale-50 blur-[10px]">Contact</li>
-                <li className="text-background font-bold text-[48px] p-[10px] transform origin-[-20px_50%] will-change-transform opacity-0 scale-50 blur-[10px]">Search</li>
+                <li className="text-background font-bold text-[48px] p-[10px] transform origin-[-20px_50%] will-change-transform opacity-0 scale-50 blur-[10px]"><Link href='/portfolio'>Portfolio</Link></li>
+                <li className="text-background font-bold text-[48px] p-[10px] transform origin-[-20px_50%] will-change-transform opacity-0 scale-50 blur-[10px]"><Link href='/about'>About</Link></li>
+                <li className="text-background font-bold text-[48px] p-[10px] transform origin-[-20px_50%] will-change-transform opacity-0 scale-50 blur-[10px]"><Link href='/contact'>Contact</Link></li>
+                <li className="text-background font-bold text-[48px] p-[10px] transform origin-[-20px_50%] will-change-transform opacity-0 scale-50 blur-[10px]"><Link href='/search'>Search</Link></li>
             </ul>
         </nav>
     );
@@ -50,7 +51,7 @@ const Path = (props) => (
 );
 
 const MenuToggle = ({ toggle }) => (
-    <button className="z-20 relative" onClick={toggle}>
+    <button className="z-20 btn relative" onClick={toggle}>
         <svg width="23" height="18" viewBox="0 0 23 18">
             <Path d="M 2 2.5 L 20 2.5" className="top" variants={{ closed: { d: "M 2 2.5 L 20 2.5" }, open: { d: "M 3 16.5 L 17 2.5" } }} />
             <Path d="M 2 9.423 L 20 9.423" opacity="1" className="middle" />

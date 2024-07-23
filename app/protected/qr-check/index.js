@@ -20,7 +20,7 @@ export default function Qrcheck() {
             // Fetch the payment status from the backend
             const fetchPaymentStatus = async () => {
                 try {
-                    const response = await fetch(`/api/payments/qr-status?paymentId=${encodeURIComponent(paymentId)}`);
+                    const response = await fetch(`/api/payments/qrcheck?paymentId=${encodeURIComponent(paymentId)}`);
                     const data = await response.json();
                     setPaymentStatus(data.status);
                     setScanned(data.scanned)

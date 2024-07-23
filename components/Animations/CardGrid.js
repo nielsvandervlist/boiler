@@ -11,7 +11,7 @@ export default function CardGrid() {
         <div className="grid grid-cols-12 gap-5 w-full mx-auto">
             {cards.map((card) => {
                 const isSelected = selectedCard === card;
-                const colSpan = isSelected ? 'col-span-8 z-20' : 'col-span-4';
+                const colSpan = isSelected ? 'col-span-8 z-10' : 'col-span-4';
                 const rowSpan = isSelected ? 'row-span-3' : 'row-span-1';
                 const order = isSelected ? 'order-first' : '';
                 const content = isSelected ? 'block' : 'hidden';

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Head from "next/head";
-import Container from "@/components/container";
+import Container from '@/components/Container';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle, faCross, faXmarkCircle } from '@fortawesome/free-solid-svg-icons';
 
@@ -18,7 +18,7 @@ export default function ThankYou(){
             // Fetch the payment status from the backend
             const fetchPaymentStatus = async () => {
                 try {
-                    const response = await fetch(`/api/payment-status?paymentId=${paymentId}`);
+                    const response = await fetch(`/api/payments/status/?paymentId=${paymentId}`);
                     const data = await response.json();
                     setPaymentStatus(data.status);
                 } catch (error) {

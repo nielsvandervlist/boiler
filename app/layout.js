@@ -18,18 +18,18 @@ export default function RootLayout({ children, session }) {
             <SessionProviderWrapper session={session}>
                 <Navbar />
                 <AnimatePresence mode={"wait"}>
-                    <motion.div
-                        key={pathname}
-                        initial={{ opacity: 0, x: 100 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: -100 }}
-                        transition={{ duration: 0.5 }}
-                        className={'flex justify-center items-center min-w-8'}
-                    >
-                        <Container>
-                            {children}
-                        </Container>
-                    </motion.div>
+                <motion.div
+                    key={pathname}
+                    initial={{ opacity: 0, rotate: 10, scale: 0.8 }}
+                    animate={{ opacity: 1, rotate: 0, scale: 1 }}
+                    exit={{ opacity: 0, rotate: -10, scale: 0.8 }}
+                    transition={{ duration: 0.7, ease: [0.43, 0.13, 0.23, 0.96] }}
+                    className={'flex justify-center items-center min-w-8'}
+                >
+                    <Container>
+                        {children}
+                    </Container>
+                </motion.div>
                 </AnimatePresence>
                 <Footer />
             </SessionProviderWrapper>
