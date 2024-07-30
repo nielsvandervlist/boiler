@@ -1,6 +1,9 @@
-// app/api/auth/[...nextauth]/route.js
 import NextAuth from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
+import { MongoDBAdapter } from "@auth/mongodb-adapter"
+import dbConnect from "@/lib/dbConnect";
+
+const clientPromise = dbConnect().then(mongoose => mongoose.connection.getClient());
 
 export const authOptions = {
   providers: [
@@ -10,6 +13,10 @@ export const authOptions = {
     }),
     // Add more providers here if needed
   ],
+  adapter: MongoDBAdapter(clientPromise),
+  session: {
+    strategy: "jwt",
+  },
   callbacks: {
     async jwt({ token, user, account, profile }) {
       // Add user information to the token right after sign in

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@auth/mongodb-adapter": "^3.4.2",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
@@ -18,7 +19,7 @@
     "classnames": "^2.5.1",
     "crypto-js": "^4.2.0",
     "framer-motion": "^11.3.8",
-    "mongodb": "^6.7.0",
+    "mongodb": "^6.8.0",
     "mongoose": "^8.4.1",
     "next": "14.2.3",
     "next-auth": "^4.24.7",

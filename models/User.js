@@ -3,6 +3,8 @@ import mongoose from 'mongoose';
 const UserSchema = new mongoose.Schema({
   // Define your user schema here
   name: {
+    name: String,
+    email: String,
     type: String,
     required: true,
   },
