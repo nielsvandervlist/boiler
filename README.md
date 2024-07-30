@@ -43,3 +43,17 @@ This application uses MongoDB for databases and search purposes, please visit [M
 
 This application uses MongoDB for databases and search purposes, please visit [NextAuth](https://next-auth.js.org/) for more information. 
 
+## Mollie
+
+This application uses MongoDB for databases and search purposes, please visit [Mollie](https://mollie.com/) for more information. 
+
+## STMP2GO
+
+This application uses MongoDB for databases and search purposes, please visit [STMP2GO](https://smtp2go.com/) for more information. 
+
+## DaisyUI
+
+This application uses MongoDB for databases and search purposes, please visit [DaisyUI](https://daisyui.com/) for more information. 
+
+
+
