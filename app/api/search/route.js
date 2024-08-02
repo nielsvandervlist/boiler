@@ -13,7 +13,6 @@ export async function GET(req) {
         }
 
         await connectToDatabase();
-
         const searchQuery = [
             {
                 $search: {

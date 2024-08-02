@@ -1,4 +1,5 @@
 import React from 'react';
+import Table from "@components/Data/Table";
 
 async function fetchUsers() {
     const res = await fetch(`${process.env.NEXT_PUBLIC_LOCAL_URL}/api/users`, {cache: "no-store"});
@@ -13,14 +14,13 @@ async function fetchUsers() {
 export default async function Users() {
     try {
         const users = await fetchUsers();
+
+        console.log(users)
+
         return (
             <div>
                 <h1>Users List</h1>
-                <ul>
-                    {users.map((user) => (
-                        <li key={user._id}>{user.name}</li>
-                    ))}
-                </ul>
+                <Table headings={['id', 'name', 'email', 'image', 'verified']} items={users}/>
             </div>
         );
     } catch (error) {
