@@ -11,7 +11,7 @@ const PostSchema = new mongoose.Schema({
         required: true,
         unique: true,
     },
-    userMail: {
+    email: {
         type: String,
         required: true,
         unique: true,

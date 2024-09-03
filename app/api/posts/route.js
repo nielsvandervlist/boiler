@@ -1,12 +1,16 @@
 import { NextResponse } from 'next/server';
 import connectToDatabase from '@/lib/dbConnect';
 import Post from '@/models/Post';
+import {queryModel} from "@/lib/queryModel";
 
 export async function GET(req) {
     try {
         await connectToDatabase();
-        const posts = await Post.find({});
-        return NextResponse.json(posts, { status: 200 });
+
+        const { searchParams } = new URL(req.url);
+
+        return await queryModel(Post, searchParams);
+
     } catch (error) {
         console.error('Failed to fetch posts:', error);
         return NextResponse.json({ message: 'Unable to fetch posts' }, { status: 500 });
@@ -16,12 +20,12 @@ export async function GET(req) {
 export async function POST(req) {
     try {
         await connectToDatabase();
-        const { title, description, userMail } = await req.json();
+        const { title, description, email } = await req.json();
 
         const newPost = new Post({
             title,
             description,
-            userMail,
+            email,
         });
 
         await newPost.save();

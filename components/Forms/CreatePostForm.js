@@ -7,6 +7,8 @@ export default function CreatePostForm({email}) {
     const [description, setDescription] = useState('');
     const [message, setMessage] = useState('');
 
+    console.log(email)
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -17,8 +19,6 @@ export default function CreatePostForm({email}) {
             },
             body: JSON.stringify({ title, description, email }),
         });
-
-        console.log(response)
 
         if (response.ok) {
             const newPost = await response.json();

@@ -15,8 +15,6 @@ export default async function Users() {
     try {
         const users = await fetchUsers();
 
-        console.log(users)
-
         return (
             <div>
                 <h1>Users List</h1>
