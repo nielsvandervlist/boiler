@@ -20,9 +20,9 @@ export default function RootLayout({children, session}) {
                 <AnimatePresence mode={"wait"}>
                     <motion.div
                         key={pathname}
-                        initial={{opacity: 0, rotate: 10, scale: 0.8}}
-                        animate={{opacity: 1, rotate: 0, scale: 1}}
-                        exit={{opacity: 0, rotate: -10, scale: 0.8}}
+                        initial={{opacity: 0}}
+                        animate={{opacity: 1}}
+                        exit={{opacity: 0}}
                         transition={{duration: 0.7, ease: [0.43, 0.13, 0.23, 0.96]}}
                         className={'flex justify-center items-center min-w-8'}
                     >
