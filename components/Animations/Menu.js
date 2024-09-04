@@ -29,12 +29,12 @@ function useMenuAnimation(isOpen) {
 
 const MenuNav = () => {
     return (
-        <nav className="fixed z-20 top-0 left-0 bottom-0 w-[400px] bg-accent pt-[100px] transform translate-x-[-100%] will-change-transform">
+        <nav className="fixed z-20 top-0 left-0 bottom-0 w-[400px] bg-primary pt-[100px] transform translate-x-[-100%] will-change-transform">
             <ul className="flex flex-col gap-[10px] p-[15px] list-none m-0">
-                <li className="text-background font-bold text-[48px] p-[10px] transform origin-[-20px_50%] will-change-transform opacity-0 scale-50 blur-[10px]"><Link href='/portfolio'>Portfolio</Link></li>
-                <li className="text-background font-bold text-[48px] p-[10px] transform origin-[-20px_50%] will-change-transform opacity-0 scale-50 blur-[10px]"><Link href='/about'>About</Link></li>
-                <li className="text-background font-bold text-[48px] p-[10px] transform origin-[-20px_50%] will-change-transform opacity-0 scale-50 blur-[10px]"><Link href='/contact'>Contact</Link></li>
-                <li className="text-background font-bold text-[48px] p-[10px] transform origin-[-20px_50%] will-change-transform opacity-0 scale-50 blur-[10px]"><Link href='/search'>Search</Link></li>
+                <li className="text-white font-bold text-[48px] p-[10px] transform origin-[-20px_50%] will-change-transform opacity-0 scale-50 blur-[10px]"><Link href='/portfolio'>Portfolio</Link></li>
+                <li className="text-white font-bold text-[48px] p-[10px] transform origin-[-20px_50%] will-change-transform opacity-0 scale-50 blur-[10px]"><Link href='/about'>About</Link></li>
+                <li className="text-white font-bold text-[48px] p-[10px] transform origin-[-20px_50%] will-change-transform opacity-0 scale-50 blur-[10px]"><Link href='/contact'>Contact</Link></li>
+                <li className="text-white font-bold text-[48px] p-[10px] transform origin-[-20px_50%] will-change-transform opacity-0 scale-50 blur-[10px]"><Link href='/search'>Search</Link></li>
             </ul>
         </nav>
     );
