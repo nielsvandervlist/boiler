@@ -21,10 +21,6 @@ export default function Payments() {
         });
     };
 
-    function formatValue(val) {
-        return `${val * 2}.00`;
-    }
-
     const handlePayment = async () => {
         setLoading(true);
         setError(null);
@@ -36,11 +32,7 @@ export default function Payments() {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    amount: formatValue(formValues.amount),
-                    currency: 'EUR',
-                    description: 'Ticket Pasar Leiden',
-                    email: formValues.email,
-                    tickets: formValues.amount
+                    //
                 }),
             });
 

@@ -17,8 +17,6 @@
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "@mollie/api-client": "^3.7.0",
-    "@react-three/fiber": "^8.17.6",
     "classnames": "^2.5.1",
     "clsx": "^2.1.1",
     "crypto-js": "^4.2.0",
@@ -31,7 +29,8 @@
     "nodemailer": "^6.9.14",
     "qrcode": "^1.5.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "stripe": "^16.9.0"
   },
   "devDependencies": {
     "@types/react": "18.3.3",

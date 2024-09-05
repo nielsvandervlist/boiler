@@ -13,7 +13,7 @@ export default async function Page() {
         return <div>No user</div>
     }
 
-    return <div class={'flex flex-col gap-8 py-8'}>
+    return <div className={'flex flex-col gap-8 py-8'}>
         <Hero/>
         <Features/>
         <Phone/>
